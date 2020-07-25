@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.grid-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid-container div {
+  flex: 1 1 20%;
+}

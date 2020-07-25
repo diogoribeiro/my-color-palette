@@ -1,0 +1,9 @@
+{
+  "name": "My Color Palette",
+  "version": "1.0",
+  "description": "Overrides chrome's default new tab to provide a nice color palette",
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  }
+}
