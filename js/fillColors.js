@@ -1,11 +1,14 @@
-function updateBackgrounds(colors, colorBoxes) {
-  colorBoxes.forEach(
-    (colorBox, index) => (colorBox.style.backgroundColor = `rgb(${colors[index].join(',')})`),
-  );
+function updateBackgrounds(colors, colorBoxesContainer) {
+  colors.forEach((color) => {
+    const box = document.createElement('div');
+    box.style.backgroundColor = `rgb(${color.join(',')})`
+
+    colorBoxesContainer.appendChild(box);
+  });
 }
 
 (function fillColors() {
-  const colorBoxes = document.querySelectorAll('.grid-container div');
+  const colorBoxesContainer = document.querySelector('.grid-container');
   loadColors()
-    .then(colors => updateBackgrounds(colors, colorBoxes));
+    .then(colors => updateBackgrounds(colors, colorBoxesContainer));
 })();

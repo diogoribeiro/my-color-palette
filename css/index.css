@@ -1,4 +1,5 @@
 body {
+  background: #fff;
   margin: 0;
 }
 
@@ -8,6 +9,42 @@ body {
   width: 100vw;
 }
 
+@keyframes up {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
 .grid-container div {
   flex: 1 1 20%;
+}
+
+.grid-container div:nth-child(odd) {
+  animation-duration: 1s;
+  animation-name: up;
+}
+
+@keyframes down {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+.grid-container div:nth-child(even):after {
+  content: '';
+  background-color: #fff;
+  display: block;
+  height: 0;
+  width: 100%;
+
+  animation-duration: 1s;
+  animation-name: down;
 }
