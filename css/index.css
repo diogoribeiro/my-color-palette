@@ -9,6 +9,14 @@ body {
   width: 100vw;
 }
 
+.grid-container div {
+  align-items: center;
+  display: flex;
+  flex: 1 1 20%;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @keyframes up {
   from {
     height: 0;
@@ -19,10 +27,6 @@ body {
   }
 }
 
-.grid-container div {
-  flex: 1 1 20%;
-}
-
 .grid-container div:nth-child(odd) {
   animation-duration: 1s;
   animation-name: up;
@@ -30,21 +34,15 @@ body {
 
 @keyframes down {
   from {
-    height: 100%;
+    margin-top: 100vh;
   }
 
   to {
-    height: 0;
+    margin-top: 0;
   }
 }
 
-.grid-container div:nth-child(even):after {
-  content: '';
-  background-color: #fff;
-  display: block;
-  height: 0;
-  width: 100%;
-
+.grid-container div:nth-child(even) {
   animation-duration: 1s;
   animation-name: down;
 }

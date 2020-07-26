@@ -1,7 +1,7 @@
 function updateBackgrounds(colors, colorBoxesContainer) {
   colors.forEach((color) => {
     const box = document.createElement('div');
-    box.style.backgroundColor = `rgb(${color.join(',')})`
+    box.style.backgroundColor = `rgb(${color.join(',')})`;
 
     colorBoxesContainer.appendChild(box);
   });
