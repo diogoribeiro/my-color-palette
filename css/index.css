@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&family=Staatliches&display=swap');
+
 body {
   background: #fff;
   margin: 0;
@@ -45,4 +47,23 @@ body {
 .grid-container div:nth-child(even) {
   animation-duration: 1s;
   animation-name: down;
+}
+
+
+.grid-container div span {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Rowdies', cursive;
+  font-size: 14px;
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+  padding: 10px 15px;
+}
+
+.grid-container div span svg {
+  height: 18px;
+  margin-left: 12px;
+  width: 18px;
 }
