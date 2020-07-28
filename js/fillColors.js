@@ -1,3 +1,5 @@
+'use strict';
+
 const WHITE_COLOR = '#FFF';
 
 function createCorlorName(colorName) {
@@ -12,16 +14,19 @@ function createCorlorName(colorName) {
 function updateBackgrounds(colors, colorBoxesContainer) {
   colors.forEach((color) => {
     const box = document.createElement('div');
-    const colorString = tinycolor(`rgb(${color.join(',')})`).toHexString();
-    box.style.backgroundColor = colorString;
-    box.appendChild(createCorlorName(colorString));
+    box.style.backgroundColor = color;
+    box.appendChild(createCorlorName(color));
 
     colorBoxesContainer.appendChild(box);
   });
 }
 
+function selectColorPallete() {
+  const colorPaletteIndex = Math.floor(Math.random() * ((colorPalettes.length - 1) + 1));
+  return colorPalettes[colorPaletteIndex];
+}
+
 (function fillColors() {
   const colorBoxesContainer = document.querySelector('.grid-container');
-  loadColors()
-    .then(colors => updateBackgrounds(colors, colorBoxesContainer));
+  updateBackgrounds(selectColorPallete(), colorBoxesContainer);
 })();
