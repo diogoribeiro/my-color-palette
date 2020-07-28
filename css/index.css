@@ -17,6 +17,12 @@ body {
   flex: 1 1 20%;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
+}
+
+.grid-container div:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+  z-index: 2;
 }
 
 @keyframes up {
@@ -51,19 +57,15 @@ body {
 
 
 .grid-container div span {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  cursor: pointer;
+  color: #fff;
   display: flex;
   font-family: 'Rowdies', cursive;
-  font-size: 14px;
-  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
-  padding: 10px 15px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  text-transform: uppercase;
 }
 
-.grid-container div span svg {
-  height: 18px;
-  margin-left: 12px;
-  width: 18px;
+.grid-container div span.dark {
+  color: #000;
 }
